@@ -1,7 +1,23 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>Flask Starter Code</h1>
-<p class="lead">Use this starter template for your Flask apps as a way to quickly start any new project.<br>
-All you get are these files and mostly barebones HTML/CSS files.</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Flask Starter Code</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 {% endblock %}

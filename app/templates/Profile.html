@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='./css/app.css')}}"> {% endblock%}
+{% block main %}
+
+<aside>
+<div class = "fisrt">
+    <div class = "profile image">
+        <img src="{{ url_for('static', filename='images/profilepic.jpg') }}" alt="Your Image">
+        
+    </div>
+
+
+    <div class = "info">
+        <h2>D'Janae Patterson</h2>
+        <p>@djanaepat</p>
+        <p>Kingston, Jamaica</p>
+        <p>Joined: {{ user['join_date'] }}</p>
+    </div>
+</div>   
+
+    
+<div class = "second">
+    
+    <div class ='about'>
+        <p>I am a university student who is passionate about web development. Currently enrolled in the Web Development 2 course,
+            I stand out for my creativity and fun-loving nature. I enjoy crafting captivating web designs, always pushing the 
+            boundaries of my imagination. Whether it's experimenting with color schemes or exploring new design trends, my enthusiasm for creating beautiful and functional websites is truly inspiring.
+        </p>
+    </div>
+    
+    <div class="tracking">
+        <div class = "p2">
+            <p class="bold">7</p>
+            <p>Post</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">100</p>
+            <p>Following</p>
+        </div>
+
+        <div class = "p2">
+            <p class="bold">250</p>
+            <p>Followers</p>
+        </div>
+        
+
+    </div>
+
+</div>
+<button type="button" class="btn">Follow</button>
+
+</aside>
+{% endblock %}
